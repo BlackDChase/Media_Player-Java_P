@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 10, 2019, 12:31:58 PM
+    Author     : Hussain
+*/
+
+.linear-grad-to-bottom
+{
+    -fx-background-color: linear-gradient(to bottom, #5AB0E2, #283C50);
+}
+
+.linear-grad-to-top
+{
+ -fx-background-color: linear-gradient(to bottom, #283C50, #5AB0E2);    
+}
+
+.progress-indicator
+{
+    
+    -fx-progress-color: #5AB0E2;
+}

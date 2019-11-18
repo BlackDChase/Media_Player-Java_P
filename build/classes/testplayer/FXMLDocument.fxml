@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="943.0" style="-fx-background-color: #5AB0E2;" styleClass="linear-grad-to-bottom" stylesheets="@TestCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testplayer.FXMLDocumentController">
+   <top>
+      <Pane prefHeight="54.0" prefWidth="851.0" styleClass="linear-grad-to-top" BorderPane.alignment="CENTER">
+         <children>
+            <MaterialDesignIconView fill="WHITE" glyphName="VIEW_HEADLINE" layoutX="14.0" layoutY="42.0" size="40" />
+            <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" layoutX="876.0" layoutY="42.0" size="40" />
+            <Button fx:id="openFile" layoutX="17.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleButtonAction" opacity="0.0" prefHeight="25.0" prefWidth="36.0" />
+            <Button fx:id="exit" layoutX="879.0" layoutY="13.0" mnemonicParsing="false" onAction="#exitVideo" opacity="0.0" prefHeight="26.0" prefWidth="33.0" />
+            <Label layoutX="391.0" layoutY="12.0" prefHeight="17.0" prefWidth="161.0" text="MediaPlayer" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="80.0" prefWidth="943.0" styleClass="linear-grad-to-bottom" BorderPane.alignment="CENTER">
+         <children>
+            <MaterialDesignIconView fill="WHITE" glyphName="BULLHORN" layoutX="678.0" layoutY="57.0" size="30" />
+            <Slider fx:id="vol_slider" layoutX="737.0" layoutY="33.0" prefHeight="14.0" prefWidth="164.0" showTickMarks="true" value="50.0" />
+            <Button fx:id="mute" layoutX="672.0" layoutY="29.0" mnemonicParsing="false" onAction="#muteVideo" opacity="0.0" prefHeight="25.0" prefWidth="43.0" />
+            <MaterialDesignIconView fill="WHITE" glyphName="PLAY" layoutX="434.0" layoutY="67.0" size="55" />
+            <Button fx:id="play1" layoutX="434.0" layoutY="20.0" mnemonicParsing="false" onAction="#playVideo" opacity="0.0" prefHeight="51.0" prefWidth="62.0" />
+            <Slider fx:id="seek_slider" layoutX="26.0" layoutY="5.0" prefHeight="14.0" prefWidth="881.0" styleClass="progress-indicator" />
+            <Button fx:id="stop" layoutX="345.0" layoutY="32.0" mnemonicParsing="false" onAction="#stopVideo" prefHeight="22.0" prefWidth="32.0" />
+            <Slider fx:id="speed_slider" blockIncrement="0.1" layoutX="85.0" layoutY="35.0" majorTickUnit="0.25" max="2.0" min="0.5" showTickMarks="true" value="1.0" />
+            <Label layoutX="740.0" layoutY="53.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="889.0" layoutY="55.0" text="100" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="54.0" text="0.5" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="54.0" text="2" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="pause" layoutX="533.0" layoutY="32.0" mnemonicParsing="false" onAction="#pauseVideo" prefHeight="31.0" prefWidth="41.0" text="| |">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MaterialDesignIconView fill="WHITE" glyphName="TERRAIN" size="250" />
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
